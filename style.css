@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+
+
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --gray-blue: hsl(246, 25%, 77%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background: var(--red);
+    color: var(--dark-blue);
+}
+
+main {
+    display: flex;
+    gap: 3rem;
+    margin: 5rem auto;
+    width: 75%;
+}
+
+section.text {
+    align-self: center;
+    color: #fff;
+}
+
+section.text h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    line-height: 3rem;
+}
+
+section.text p {
+    font-weight: 400;
+}
+
+section.form .form-header {
+    background: var(--blue);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+}
+
+section.form .form-header span {
+    color: var(--gray-blue);
+}
+
+section form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem;
+    background: #fff;
+    white-space: nowrap;
+    border-radius: .5rem;
+}
+
+section form input {
+    padding: .8rem;
+    border: 1px solid var(--gray-blue);
+    border-radius: .2rem;
+    outline: none;
+}
+
+section form input::placeholder {
+    font-weight: 600;
+}
+
+section form input:focus-within {
+    border: 2px solid var(--blue);
+}
+
+section form input[type="submit"] {
+    background: var(--green);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+section form p {
+    color: var(--gray-blue);
+    font-weight: 400;
+    font-size: smaller;
+    text-align: center;
+}
+
+section form p a {
+    color: var(--red);
+    text-decoration: none;
+}
+
+section form p a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 770px) {
+    main {
+        flex-direction: column;
+    }
+
+    section.text {
+        text-align: center;
+    }
+
+    section.text h1 {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+
+    section form {
+        padding: 1rem;
+        white-space: normal;
+    }
+}
