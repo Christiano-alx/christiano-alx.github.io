@@ -23,21 +23,61 @@
             </div>
 
             <div class="form">
-                <form action="#">
-                    <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
+                <form action="#" id="form" onsubmit="return validSubmit()">
+                    <input type="text" name="firstname" id="firstname" placeholder="First Name">
+                    <img src="icon-error.svg" alt="icon-error">
+                    <label for="firstname" id="fname"></label>
 
                     <input type="text" name="lastname" id="lastname" placeholder="Last Name">
+                    <img src="icon-error.svg" alt="icon-error">
+                    <label for="lastname" id="lname"></label>
 
                     <input type="email" name="email" id="email" placeholder="Email Address">
+                    <img src="icon-error.svg" alt="icon-error">
+                    <label for="email" id="e-email"></label>
 
                     <input type="password" name="password" id="password" placeholder="Password">
+                    <img src="icon-error.svg" alt="icon-error">
+                    <label for="password" id="e-pass"></label>
 
-                    <input type="submit" value="CLAIM YOUR FREE TRIAL">
+                    <input type="submit" value="CLAIM YOUR FREE TRIAL" id="submit">
 
                     <p>By clicking the button you are agreeing to our <a href="#">Terms and Services</a></p>
                 </form>
             </div>
         </section>
     </main>
+
+    <script>
+
+        function validSubmit() {
+            let fName = document.getElementById("firstname").value;
+            let lName = document.getElementById("lastname").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let label = document.querySelectorAll('label');
+
+            if (fName.length == 0 || fName == null) {
+                document.getElementById('fname').innerHTML = "First Name cannot be empty";
+                document.querySelector("img").style.display = "block";
+            }
+
+            if (lName.length == 0 || lName == null) {
+                document.getElementById("lname").innerHTML = "Last Name cannot be empty";
+                document.querySelector("img").style.display = "block";
+            }
+
+            if (email.length == 0 || email == null) {
+                document.getElementById("e-email").innerHTML = "Looks like this is not an email";
+                document.querySelector("img").style.display = "block";
+            }
+
+            if (password.length == 0 || password == null) {
+                document.getElementById("e-pass").innerHTML = "Password cannot be empty";
+                document.querySelector("img").style.display = "block";
+            }
+        }
+
+    </script>
 </body>
 </html>
