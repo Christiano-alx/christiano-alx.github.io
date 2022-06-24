@@ -53,6 +53,7 @@ section.form .form-header {
     text-align: center;
     margin-bottom: 2rem;
     border-radius: .5rem;
+    box-shadow: 0 .4rem rgba(0, 0, 0, 0.2);
 }
 
 section.form .form-header span {
@@ -69,11 +70,29 @@ section form {
     border-radius: .5rem;
 }
 
+section form img {
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    right: 18%;
+    top: 33.5%;
+    display: none;
+}
+
+section form label {
+    color: var(--red);
+    font-size: .75rem;
+    font-weight: 600;
+    text-align: end;
+    margin-top: -2rem;
+}
+
 section form input {
     padding: .8rem;
     border: 1px solid var(--gray-blue);
     border-radius: .2rem;
     outline: none;
+    position: relative;
 }
 
 section form input::placeholder {
@@ -89,6 +108,8 @@ section form input[type="submit"] {
     color: #fff;
     font-weight: 600;
     cursor: pointer;
+    border: none;
+    box-shadow: 0 .2rem rgb(16, 135, 45);
 }
 
 section form p {
